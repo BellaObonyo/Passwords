@@ -5,7 +5,6 @@ from credential import Credential
 class TestCredential(unittest.TestCase):
   '''
   Test class that defines test cases for the credential class behaviours.
-
   Args:
     unittest.TestCase: TestCase class that helps in creating credential test cases
   '''
@@ -25,7 +24,8 @@ class TestCredential(unittest.TestCase):
     '''
     test_init test case to test if the object is initialized properly
     '''
- self.assertEqual(self.new_credential.credential_name,"CynthiaObonyo")
+
+    self.assertEqual(self.new_credential.credential_name,"CynthiaObonyo")
     self.assertEqual(self.new_credential.password,"1234")
     self.assertEqual(self.new_credential.number,"0792625077")
   def test_save_credential(self):
@@ -66,7 +66,7 @@ class TestCredential(unittest.TestCase):
     test_credential = Credential("BellaCynthia","Bel123","072761175") #new credential
     test_credential.save_credential()
 
-    found_credential = Credential.find_credential_by_number("0727611875")
+    found_credential = Credential.find_credential_by_number("072761175")
 
     self.assertEqual(found_credential.credential_name,test_credential.credential_name)
 
@@ -95,9 +95,11 @@ class TestCredential(unittest.TestCase):
         '''
 
         self.new_credential.save_credential()
-        Credential.copy_pwd("072761175")
+        Credential.copy_pwd("0792625077")
 
         self.assertEqual(self.new_credential.password,pyperclip.paste())
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     unittest.main()
+
+

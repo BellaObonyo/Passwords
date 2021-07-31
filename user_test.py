@@ -13,7 +13,7 @@ class TestUser(unittest.TestCase):
     '''
     Set up method to run before each test cases in User
     '''
-     self.new_user = User("Cynthia","Obonyo","0792625077","cynthiabella.obonyo@gmail.com") #creating user object
+    self.new_user = User("Cynthia","Obonyo","0792625077","cynthiabella.obonyo@gmail.com") #creating user object
 
   def tearDown(self):
     '''
@@ -23,9 +23,6 @@ class TestUser(unittest.TestCase):
 
   def test_init(self):
     '''
-    test_init test case to test if the object is initialized properly
-    '''
- 
     test_init test case to test if the object is initialized properly
     '''
 
@@ -40,7 +37,7 @@ class TestUser(unittest.TestCase):
     '''
     self.new_user.save_user() #saving the user
     self.assertEqual(len(User.user_list),1)
-    def test_save_multiple_user(self):
+  def test_save_multiple_user(self):
     '''
     test_save_multiple_user to check if we can save multiple contact
     objects to our contact list
@@ -54,8 +51,8 @@ class TestUser(unittest.TestCase):
     '''
     test_delete_user to test if we can remove a user from our user list
     '''
- self.new_user.save_user()
-    test_user = User("Adongo","Lorrein","0716578937","adoshe@gmail.com") #new user
+    self.new_user.save_user()
+    test_user = User("Bella","Cynthia","0727611875","obonyocy@ueab.ac.ke") #new user
     test_user.save_user()
 
     self.new_user.delete_user() #Deleting a user object
@@ -67,9 +64,9 @@ class TestUser(unittest.TestCase):
     '''
 
     self.new_user.save_user()
-    test_user = User("Brian","Kenny","0716709243","nightrunner@gmail.com") #new user
+    test_user = User("Brian","Kenny","0716709243","cynthiabella.obonyo@gmail.com") #new user
     test_user.save_user()
- found_user = User.find_by_number("0714042437")
+    found_user = User.find_by_number("0792625077")
 
     self.assertEqual(found_user.email,test_user.email)
 
@@ -87,7 +84,7 @@ class TestUser(unittest.TestCase):
     self.assertTrue(user_exists)
 
   def test_display_all_users(self):
-       '''
+    '''
     method that returns a list of all users saved
     '''
     self.assertEqual(User.display_users(),User.user_list)
@@ -102,5 +99,5 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.email,pyperclip.paste())
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     unittest.main()

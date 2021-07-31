@@ -5,7 +5,7 @@ class Credential:
   """
   credential_list = []
 
-  def _init_(self, credential_name, password,number):
+  def __init__(self, credential_name, password,number):
     self.credential_name = credential_name
     self.password = password
     self.number = number
@@ -28,8 +28,7 @@ class Credential:
   @classmethod
   def find_credential_by_number(cls,number):
     '''
-      Method that takes in a number and returns a credential that matches that number.
-
+    Method that takes in a number and returns a credential that matches that number.
     Args:
       number:Phone number to search for
     Returns:
@@ -53,7 +52,8 @@ class Credential:
         return True
 
     return False
- @classmethod
+
+  @classmethod
   def display_credentials(cls):
     '''
     method that returns the credential list

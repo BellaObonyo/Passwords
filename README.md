@@ -2,7 +2,7 @@
 ## Description
 This a web application  that allows user to create a social media account e.g facebook $instagram allows him or her to create a paasword,delete an account, change email.
 # Set Up & Instalation Guide
-- After my repository's name, Select on the grren button on Github
+- After my repository's name, Select on the green button on Github
 - Open terminal command
 - Select Where you want to clone the project. eg desktop
 - git clone https://github.com/ObonyoCynthia/Passwords/

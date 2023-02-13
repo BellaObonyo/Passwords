@@ -1,4 +1,4 @@
-# Pizza Inn
+# Passwords
 ## Description
 This a web application  that allows user to create a social media account e.g facebook $instagram allows him or her to create a paasword,delete an account, change email.
 # Set Up & Instalation Guide
